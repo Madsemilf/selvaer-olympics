@@ -1,0 +1,27 @@
+[
+  {
+    "id": "kveitelinebaering",
+    "name": "Kveitelinebæring",
+    "description": "Bær kveiteline en gitt distanse/tid med pils innlagt. Styrke og utholdenhet avgjør."
+  },
+  {
+    "id": "konkurranse-2",
+    "name": "Konkurranse 2",
+    "description": "TBA"
+  },
+  {
+    "id": "konkurranse-3",
+    "name": "Konkurranse 3",
+    "description": "TBA"
+  },
+  {
+    "id": "konkurranse-4",
+    "name": "Konkurranse 4",
+    "description": "TBA"
+  },
+  {
+    "id": "konkurranse-5",
+    "name": "Konkurranse 5",
+    "description": "TBA (valgfri)"
+  }
+]

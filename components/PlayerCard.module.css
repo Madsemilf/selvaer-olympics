@@ -1,0 +1,176 @@
+.card {
+  width: 160px;
+  border-radius: 12px;
+  padding: 12px 10px 10px;
+  font-family: 'Arial Black', Arial, sans-serif;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.18s, box-shadow 0.18s;
+  user-select: none;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.7);
+}
+
+/* ── Gold ── */
+.gold {
+  background: linear-gradient(160deg, #5a3e10 0%, #c8963e 45%, #e8d47a 65%, #a07020 100%);
+  color: #2a1808;
+  overflow: hidden;
+}
+
+.gold .overall  { color: #2a1808; }
+.gold .position { color: #4a3010; }
+.gold .name     { color: #2a1808; }
+.gold .divider  { border-color: rgba(42, 24, 8, 0.25); }
+.gold .statVal  { color: #2a1808; }
+.gold .statLabel { color: rgba(42, 24, 8, 0.55); }
+.gold .specialty { background: rgba(42,24,8,0.15); color: #3a2008; border-color: rgba(42,24,8,0.2); }
+
+@keyframes cardShine {
+  0%       { left: -80%; }
+  55%, 100% { left: 130%; }
+}
+
+.gold::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -80%;
+  width: 55%;
+  height: 140%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 220, 0.2), transparent);
+  transform: skewX(-20deg);
+  animation: cardShine 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Silver ── */
+.silver {
+  background: linear-gradient(160deg, #3a3a3a 0%, #8a8a8a 45%, #c0c0c0 65%, #666 100%);
+  color: #fff;
+}
+
+.silver .overall  { color: #fff; }
+.silver .position { color: #ddd; }
+.silver .name     { color: #fff; }
+.silver .divider  { border-color: rgba(255, 255, 255, 0.25); }
+.silver .statVal  { color: #fff; }
+.silver .statLabel { color: rgba(255, 255, 255, 0.55); }
+.silver .specialty { background: rgba(255,255,255,0.12); color: #eee; border-color: rgba(255,255,255,0.2); }
+
+/* ── Bronze ── */
+.bronze {
+  background: linear-gradient(160deg, #3d1a08 0%, #8b4a1e 45%, #c07840 65%, #5a2e10 100%);
+  color: #f0d8c0;
+}
+
+.bronze .overall  { color: #f0d8c0; }
+.bronze .position { color: #d0b898; }
+.bronze .name     { color: #f0d8c0; }
+.bronze .divider  { border-color: rgba(240, 216, 192, 0.25); }
+.bronze .statVal  { color: #f0d8c0; }
+.bronze .statLabel { color: rgba(240, 216, 192, 0.55); }
+.bronze .specialty { background: rgba(240,216,192,0.1); color: #e8c8a0; border-color: rgba(240,216,192,0.2); }
+
+/* ── Card internals ── */
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+}
+
+.overallBlock { line-height: 1; }
+
+.overall {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.position {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.emblem {
+  font-size: 22px;
+  margin-top: 2px;
+}
+
+.photoWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-bottom: 6px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.name {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid;
+  margin: 5px 0 4px;
+}
+
+.specialty {
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px 6px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statVal {
+  font-size: 11px;
+  font-weight: 900;
+  min-width: 20px;
+}
+
+.statLabel {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}

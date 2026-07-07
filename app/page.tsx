@@ -27,6 +27,28 @@ export default async function Home() {
         </p>
       </header>
 
+      {hasResults && (
+        <div style={{
+          textAlign: 'center',
+          marginBottom: 36,
+          padding: '16px 20px',
+          background: 'linear-gradient(90deg, rgba(240,192,64,0.08), rgba(240,192,64,0.18), rgba(240,192,64,0.08))',
+          border: '1px solid rgba(240,192,64,0.35)',
+          borderRadius: 12,
+        }}>
+          <div style={{ fontSize: 11, fontWeight: 700, color: '#a0c4d8', letterSpacing: 2, textTransform: 'uppercase', marginBottom: 6 }}>
+            Leder
+          </div>
+          <div style={{ fontSize: 22, fontWeight: 900, color: '#f0c040' }}>
+            {leaderboard[0].participant.emoji} {leaderboard[0].participant.name}
+          </div>
+          <div style={{ fontSize: 13, color: '#a0c4d8', marginTop: 4 }}>
+            {leaderboard[0].score} poeng
+            {leaderboard[1].score === leaderboard[0].score && ` — likt med ${leaderboard[1].participant.name}`}
+          </div>
+        </div>
+      )}
+
       <section style={{ marginBottom: 52 }}>
         <div style={{
           display: 'grid',
@@ -99,8 +121,8 @@ export default async function Home() {
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
                   {doneCount > 0 && (
-                    <span style={{ fontSize: 12, color: doneCount === 10 ? '#2ecc71' : '#a0c4d8' }}>
-                      {doneCount}/10
+                    <span style={{ fontSize: 12, color: doneCount === 11 ? '#2ecc71' : '#a0c4d8' }}>
+                      {doneCount}/11
                     </span>
                   )}
                   <span style={{ color: '#f0c040', fontSize: 18 }}>→</span>

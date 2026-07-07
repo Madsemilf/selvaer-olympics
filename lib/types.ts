@@ -1,7 +1,7 @@
 export interface ParticipantStats {
   styrke: number;
   pilse: number;
-  festfaktor: number;
+  jogglefaktor: number;
   sjobein: number;
   comeback: number;
   skryte: number;

@@ -14,7 +14,7 @@ const participants = participantsData as Participant[];
 const STAT_LABELS: Record<string, string> = {
   styrke: 'Styrke',
   pilse: 'Pilse-kapasitet',
-  festfaktor: 'Festfaktor',
+  jogglefaktor: 'Jøgglefaktor',
   sjobein: 'Sjøbein',
   comeback: 'Comeback-evne',
   skryte: 'Skryte-nivå',

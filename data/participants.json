@@ -4,34 +4,34 @@
     "name": "Jakob L",
     "emoji": "🦈",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 92, "pilse": 88, "festfaktor": 74, "sjobein": 90, "comeback": 95, "skryte": 71 },
+    "stats": { "styrke": 92, "pilse": 88, "jogglefaktor": 74, "sjobein": 90, "comeback": 95, "skryte": 71 },
     "specialty": "Gir aldri opp",
-    "bio": "194 cm ren konkurranse-angst. Hater å tape så mye at det går utover humøret til alle rundt ham. Har vunnet før. Stresser fortsatt."
+    "bio": "Alltid på. Kroppen hviler, hjernetaktikken kjører på nattestid. Sist han tapte husker han ikke – fordi det ikke skjedde. Tar dette like seriøst som de fleste tar fulltidsjobb. Det er derfor han vinner."
   },
   {
     "id": "mads-emil",
     "name": "Mads-Emil",
     "emoji": "🐋",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 91, "pilse": 95, "festfaktor": 78, "sjobein": 81, "comeback": 70, "skryte": 65 },
+    "stats": { "styrke": 91, "pilse": 95, "jogglefaktor": 78, "sjobein": 81, "comeback": 70, "skryte": 65 },
     "specialty": "Kveitelinebæring",
-    "bio": "195 cm, 100 kg. Tar ting på sin egen tid – som regel litt etter alle andre. Bærer kveiteline, drikker pils, gjentar."
+    "bio": "100 kg. Tar ting på sin egen tid – som regel litt etter alle andre. Bærer kveiteline, drikker pils, gjentar."
   },
   {
     "id": "espen",
     "name": "Espen",
     "emoji": "🦐",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 64, "pilse": 61, "festfaktor": 75, "sjobein": 50, "comeback": 69, "skryte": 64 },
+    "stats": { "styrke": 99, "pilse": 99, "jogglefaktor": 99, "sjobein": 99, "comeback": 99, "skryte": 99 },
     "specialty": "Uventet levering",
-    "bio": "Litt stressa hele tiden, men den typen som plutselig leverer når det gjelder. Sjøbeina er et kjent problem. Får som regel lættis av noe i løpet av dagen."
+    "bio": "Ser ut som han tar det med ro. Gjør det ikke. Full panikk innvendig, overraskende bra resultater på utsiden. Smartere enn gjennomsnittet, morsommere enn han vet. Sjøbeina nekter å samarbeide – resten er faktisk veldig bra."
   },
   {
     "id": "jakob-r",
     "name": "Jakob R",
     "emoji": "🐙",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 81, "pilse": 79, "festfaktor": 84, "sjobein": 82, "comeback": 83, "skryte": 78 },
+    "stats": { "styrke": 81, "pilse": 79, "jogglefaktor": 84, "sjobein": 82, "comeback": 83, "skryte": 78 },
     "specialty": "Jøggler",
     "bio": "Peak form akkurat nå, og det merkes. God på det meste, irriterende på ingenting. En jøggler."
   },
@@ -40,7 +40,7 @@
     "name": "Oliver",
     "emoji": "🐬",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 78, "pilse": 55, "festfaktor": 91, "sjobein": 90, "comeback": 91, "skryte": 48 },
+    "stats": { "styrke": 78, "pilse": 55, "jogglefaktor": 91, "sjobein": 90, "comeback": 91, "skryte": 48 },
     "specialty": "Stille vinner",
     "bio": "Arrangerte hele Olympics, sitter rolig i båten, og vinner likevel. Intellektuell og spirituell – men skjuler tydeligvis en vinnerskalle bak all den harmonien."
   },
@@ -49,7 +49,7 @@
     "name": "Remi",
     "emoji": "🦞",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 85, "pilse": 87, "festfaktor": 86, "sjobein": 83, "comeback": 83, "skryte": 74 },
+    "stats": { "styrke": 85, "pilse": 87, "jogglefaktor": 86, "sjobein": 83, "comeback": 83, "skryte": 74 },
     "specialty": "Rå kraft",
     "bio": "Oksen fra Bergen. Sterk, mental og en skikkelig bra fyr. Den typen du vil ha i laget ditt – og ikke mot deg."
   },
@@ -58,7 +58,7 @@
     "name": "Edvard",
     "emoji": "🦀",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 48, "pilse": 64, "festfaktor": 66, "sjobein": 70, "comeback": 80, "skryte": 84 },
+    "stats": { "styrke": 48, "pilse": 64, "jogglefaktor": 66, "sjobein": 70, "comeback": 80, "skryte": 84 },
     "specialty": "Ordveksler",
     "bio": "Advokaten. Liten og rolig, men vinner diskusjoner han egentlig ikke burde vinne. Kalkulert. Undervurder ham og du angrer."
   },
@@ -67,8 +67,8 @@
     "name": "Henrik",
     "emoji": "🐡",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 38, "pilse": 76, "festfaktor": 52, "sjobein": 44, "comeback": 79, "skryte": 44 },
-    "specialty": "Kronisk ølholder",
+    "stats": { "styrke": 38, "pilse": 76, "jogglefaktor": 52, "sjobein": 44, "comeback": 79, "skryte": 44 },
+    "specialty": "Google brain",
     "bio": "Hissig liten ginger med Google-hjerne. Har alltid en øl i hånden – alltid. Drikker hele dagen, bare aldri fort. Prøvde å chugge én gang. Vi snakker ikke om det."
   },
   {
@@ -76,17 +76,26 @@
     "name": "Sebastian",
     "emoji": "🐠",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 71, "pilse": 75, "festfaktor": 82, "sjobein": 66, "comeback": 68, "skryte": 78 },
+    "stats": { "styrke": 71, "pilse": 75, "jogglefaktor": 82, "sjobein": 66, "comeback": 68, "skryte": 78 },
     "specialty": "Banter king",
-    "bio": "Halvt colombianer, 194 cm, mye banter. Fikk strekk sist gang og møter opp igjen som om ingenting. Fotball-bakgrunn som han ikke klarer å la være å nevne."
+    "bio": "Halvt colombianer, dobbelt så mye banter. Med en fotballfortid han passer på å nevne minst én gang per dag. Fikk strekk sist runde – dukket opp igjen med smil og to nye historier. Tilstedeværelsens udiskutable mester."
+  },
+  {
+    "id": "emil",
+    "name": "Emil",
+    "emoji": "🦑",
+    "photo": "/players/placeholder.svg",
+    "stats": { "styrke": 68, "pilse": 79, "jogglefaktor": 88, "sjobein": 74, "comeback": 91, "skryte": 82 },
+    "specialty": "Ringrev",
+    "bio": "Ringrev. Har en kommentar klar før du er ferdig med setningen. Ekspert på minst tre ting – forteller deg om alle fem. Rask og morsom på en måte som er irriterende å konkurrere mot."
   },
   {
     "id": "martin",
     "name": "Martin",
     "emoji": "🐳",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 84, "pilse": 78, "festfaktor": 93, "sjobein": 83, "comeback": 80, "skryte": 55 },
+    "stats": { "styrke": 84, "pilse": 78, "jogglefaktor": 93, "sjobein": 83, "comeback": 80, "skryte": 55 },
     "specialty": "Gresk gud",
-    "bio": "194 cm, atletisk, og genuint snill. Litt mistenkelig egentlig. Alle liker Martin – ingen aner hvorfor det er litt irriterende."
+    "bio": "Atletisk og genuint snill. Litt mistenkelig egentlig. Alle liker Martin – ingen aner hvorfor det er litt irriterende."
   }
 ]

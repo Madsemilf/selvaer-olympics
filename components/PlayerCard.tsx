@@ -5,13 +5,13 @@ import styles from './PlayerCard.module.css';
 const STAT_LABELS: Record<string, string> = {
   styrke: 'STY',
   pilse: 'PIL',
-  festfaktor: 'FES',
+  jogglefaktor: 'JØG',
   sjobein: 'SJØ',
   comeback: 'CMB',
   skryte: 'SKR',
 };
 
-const STAT_ORDER = ['styrke', 'pilse', 'festfaktor', 'sjobein', 'comeback', 'skryte'];
+const STAT_ORDER = ['styrke', 'pilse', 'jogglefaktor', 'sjobein', 'comeback', 'skryte'];
 
 function tierClass(overall: number) {
   if (overall >= 75) return styles.gold;

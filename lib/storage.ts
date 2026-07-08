@@ -16,14 +16,24 @@ async function writeLocal(data: Placements): Promise<void> {
   await fs.writeFile(LOCAL_PATH, JSON.stringify(data, null, 2));
 }
 
-export async function getPlacements(): Promise<Placements> {
-  if (!process.env.NETLIFY) return readLocal();
+async function getBlobStore() {
   const { getStore } = await import('@netlify/blobs');
-  return (await getStore('results').get('placements', { type: 'json' })) ?? {};
+  try {
+    return getStore('results');
+  } catch (err) {
+    if (err instanceof Error && err.name === 'MissingBlobsEnvironmentError') return null;
+    throw err;
+  }
+}
+
+export async function getPlacements(): Promise<Placements> {
+  const store = await getBlobStore();
+  if (!store) return readLocal();
+  return (await store.get('placements', { type: 'json' })) ?? {};
 }
 
 export async function setPlacements(data: Placements): Promise<void> {
-  if (!process.env.NETLIFY) { await writeLocal(data); return; }
-  const { getStore } = await import('@netlify/blobs');
-  await getStore('results').setJSON('placements', data);
+  const store = await getBlobStore();
+  if (!store) { await writeLocal(data); return; }
+  await store.setJSON('placements', data);
 }

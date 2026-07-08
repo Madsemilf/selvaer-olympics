@@ -2,6 +2,18 @@
 
 FIFA Ultimate Team-inspirerte spillerkort + live ledertavle for Selvær-turen.
 
+## Teknologi-stack
+
+- **Next.js 15** (App Router) med React server components og route handlers
+- **React 19** + **TypeScript**
+- **Styling**: inline styles i JSX, pluss ett CSS module (`components/PlayerCard.module.css`) for spillerkortene. Ingen CSS-rammeverk.
+- **Data**:
+  - `data/participants.json` og `data/events.json` — statiske data, redigeres direkte i filene
+  - **Netlify Blobs** — lagrer plasseringer/resultater server-side, delt mellom alle enheter. Faller tilbake til en lokal `data/results.json`-fil når appen kjører utenfor Netlify (lokal dev)
+- **Hosting**: **Netlify**, via `@netlify/plugin-nextjs`
+
+Ingen database og ingen autentisering — bevisst minimalt oppsett.
+
 ## Kom i gang lokalt
 
 ```bash

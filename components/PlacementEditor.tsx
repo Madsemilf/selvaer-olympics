@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
+import { useRouter } from 'next/navigation';
 import type { Participant } from '@/lib/types';
 
 interface Props {
@@ -10,9 +11,11 @@ interface Props {
 }
 
 export default function PlacementEditor({ eventId, participants, initialPlacements }: Props) {
+  const router = useRouter();
   const [placements, setPlacements] = useState<Record<string, number>>(initialPlacements);
   const [isPending, startTransition] = useTransition();
   const [saved, setSaved] = useState(false);
+  const [error, setError] = useState(false);
 
   const update = (pid: string, val: string) => {
     setPlacements(prev => {
@@ -23,17 +26,25 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
   };
 
   const save = () => {
+    setError(false);
     startTransition(async () => {
-      const res = await fetch('/api/results');
-      const all = await res.json();
-      all[eventId] = placements;
-      await fetch('/api/results', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(all),
-      });
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2500);
+      try {
+        const res = await fetch('/api/results');
+        if (!res.ok) throw new Error('failed to load results');
+        const all = await res.json();
+        all[eventId] = placements;
+        const postRes = await fetch('/api/results', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(all),
+        });
+        if (!postRes.ok) throw new Error('failed to save results');
+        setSaved(true);
+        setTimeout(() => setSaved(false), 2500);
+        router.refresh();
+      } catch {
+        setError(true);
+      }
     });
   };
 
@@ -95,8 +106,8 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
         style={{
           marginTop: 20,
           width: '100%',
-          background: saved ? '#1a8a4a' : isPending ? '#444' : '#f0c040',
-          color: saved || isPending ? '#fff' : '#0a1e35',
+          background: error ? '#c0392b' : saved ? '#1a8a4a' : isPending ? '#444' : '#f0c040',
+          color: error || saved || isPending ? '#fff' : '#0a1e35',
           border: 'none',
           borderRadius: 10,
           padding: '13px 0',
@@ -107,7 +118,7 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
           transition: 'background 0.2s',
         }}
       >
-        {isPending ? 'Lagrer...' : saved ? '✓ Lagret!' : 'Lagre resultater'}
+        {isPending ? 'Lagrer...' : error ? '✗ Lagring feilet, prøv igjen' : saved ? '✓ Lagret!' : 'Lagre resultater'}
       </button>
     </div>
   );

@@ -129,6 +129,7 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
             </div>
           ))}
         </div>
+        
       </div>
 
       <h2 style={{ fontSize: 16, fontWeight: 900, color: '#f0c040', marginBottom: 12, letterSpacing: 1, textTransform: 'uppercase' }}>

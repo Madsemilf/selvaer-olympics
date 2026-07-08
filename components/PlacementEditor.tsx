@@ -15,7 +15,7 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
   const [placements, setPlacements] = useState<Record<string, number>>(initialPlacements);
   const [isPending, startTransition] = useTransition();
   const [saved, setSaved] = useState(false);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const update = (pid: string, val: string) => {
     setPlacements(prev => {
@@ -26,11 +26,11 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
   };
 
   const save = () => {
-    setError(false);
+    setError(null);
     startTransition(async () => {
       try {
         const res = await fetch('/api/results');
-        if (!res.ok) throw new Error('failed to load results');
+        if (!res.ok) throw new Error((await res.json().catch(() => null))?.error ?? 'Kunne ikke hente resultater');
         const all = await res.json();
         all[eventId] = placements;
         const postRes = await fetch('/api/results', {
@@ -38,12 +38,12 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(all),
         });
-        if (!postRes.ok) throw new Error('failed to save results');
+        if (!postRes.ok) throw new Error((await postRes.json().catch(() => null))?.error ?? 'Kunne ikke lagre resultater');
         setSaved(true);
         setTimeout(() => setSaved(false), 2500);
         router.refresh();
-      } catch {
-        setError(true);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Ukjent feil');
       }
     });
   };
@@ -120,6 +120,11 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
       >
         {isPending ? 'Lagrer...' : error ? '✗ Lagring feilet, prøv igjen' : saved ? '✓ Lagret!' : 'Lagre resultater'}
       </button>
+      {error && (
+        <p style={{ marginTop: 10, fontSize: 12, color: '#e88', textAlign: 'center' }}>
+          {error}
+        </p>
+      )}
     </div>
   );
 }

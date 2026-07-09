@@ -22,9 +22,9 @@
     "name": "Espen",
     "emoji": "🦐",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 99, "pilse": 99, "jogglefaktor": 99, "sjobein": 99, "comeback": 99, "skryte": 99 },
+    "stats": { "styrke": 99, "pilse": 99, "jogglefaktor": 99, "sjobein": 99, "comeback": 99, "skryte": 99, "maricon": 99 },
     "specialty": "Looksmaxer",
-    "bio": "Ser ut som han tar det med ro. Gjør det ikke. Full panikk innvendig, overraskende bra resultater på utsiden. Smartere enn gjennomsnittet, morsommere enn han vet, men samtidig complete retard. Sjøbeina nekter å samarbeide, men resten er faktisk veldig bra. Store forbilder: Clavicular, John Daly og Bjørnar Moxnes."
+    "bio": "Ser ut som han tar det med ro. Gjør det ikke. Full panikk innvendig, overraskende bra resultater på utsiden. Smartere enn gjennomsnittet, morsommere enn han vet, men samtidig complete retard. Sjøbeina nekter å samarbeide, men resten er faktisk veldig bra. Thai lover. Store forbilder: Clavicular, John Daly og Bjørnar Moxnes."
   },
   {
     "id": "jakob-r",
@@ -58,7 +58,7 @@
     "name": "Edvard",
     "emoji": "🦀",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 48, "pilse": 64, "jogglefaktor": 66, "sjobein": 70, "comeback": 80, "skryte": 84 },
+    "stats": { "styrke": 48, "pilse": 90, "jogglefaktor": 66, "sjobein": 70, "comeback": 80, "skryte": 25 },
     "specialty": "Kokkeløren",
     "bio": "Kokken om bord. Rolig i kaoset og alltid først i gang med maten. Får hele gjengen mett uansett hvor kranglete de er. Undervurder ham, så går du sulten hjem. Faen meg en flott fyr."
   },
@@ -69,14 +69,14 @@
     "photo": "/players/placeholder.svg",
     "stats": { "styrke": 38, "pilse": 76, "jogglefaktor": 52, "sjobein": 44, "comeback": 79, "skryte": 44 },
     "specialty": "Sigma",
-    "bio": "Hissig liten rødtopp med svar på det meste. Har en joint degree. Har alltid en øl i hånden, bokstavelig talt alltid. Drikker hele dagen, bare aldri fort. Prøvde å chugge én gang. Vi snakker ikke om det. Egentlig jævlig allreit."
+    "bio": "Hissig liten rødtopp med svar på det meste. Har en joint degree. Har alltid en øl i hånden, bokstavelig talt alltid. Drikker hele dagen, bare aldri fort. Prøvde å chugge én gang. Vi snakker ikke om det. Har ikke snakket med dama på et halvt år. Egentlig jævlig allreit."
   },
   {
     "id": "sebastian",
     "name": "Sebastian",
     "emoji": "🐠",
     "photo": "/players/placeholder.svg",
-    "stats": { "styrke": 71, "pilse": 75, "jogglefaktor": 82, "sjobein": 66, "comeback": 68, "skryte": 78, "rasisme": 99 },
+    "stats": { "styrke": 71, "pilse": 75, "jogglefaktor": 82, "sjobein": 66, "comeback": 68, "skryte": 78, "rasisme": 99, "empati": 99, "damer": 150, "penis": "micro" },
     "specialty": "Biggus Dickus",
     "bio": "Halvt colombianer, dobbelt så mye banter. Har lagt snusen på hylla. Fyllablikk ut av dimensjoner. Fikk strekk sist runde, dukket opp igjen med smil og to nye historier. En 10er på 1-10 rasismeskalaen."
   },

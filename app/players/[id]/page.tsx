@@ -19,6 +19,10 @@ const STAT_LABELS: Record<string, string> = {
   comeback: 'Comeback-evne',
   skryte: 'Skryte-nivå',
   rasisme: 'Rasisme',
+  empati: 'Empati',
+  damer: 'Damer',
+  penis: 'Penis',
+  maricon: 'Maricon',
 };
 
 function statBarColor(val: number) {
@@ -35,9 +39,10 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
   const placements = await getPlacements();
   const overall = getOverall(participant.stats);
 
-  const statEntries = Object.entries(participant.stats) as [keyof typeof participant.stats, number][];
-  const bestStat = statEntries.reduce((a, b) => b[1] > a[1] ? b : a);
-  const worstStat = statEntries.reduce((a, b) => b[1] < a[1] ? b : a);
+  const statEntries = Object.entries(participant.stats) as [keyof typeof participant.stats, number | string][];
+  const numericStatEntries = statEntries.filter((entry): entry is [keyof typeof participant.stats, number] => typeof entry[1] === 'number');
+  const bestStat = numericStatEntries.reduce((a, b) => b[1] > a[1] ? b : a);
+  const worstStat = numericStatEntries.reduce((a, b) => b[1] < a[1] ? b : a);
 
   return (
     <main style={{ maxWidth: 600, margin: '0 auto', padding: '24px 16px 48px' }}>
@@ -121,12 +126,14 @@ export default async function PlayerPage({ params }: { params: Promise<{ id: str
                 <span style={{ fontSize: 12, color: '#a0c4d8', fontWeight: 600 }}>{STAT_LABELS[key]}</span>
                 <span style={{ fontSize: 13, fontWeight: 900, color: '#f0c040' }}>{val}</span>
               </div>
-              <div style={{ height: 7, background: 'rgba(0,0,0,0.35)', borderRadius: 4 }}>
-                <div style={{
-                  height: '100%', width: `${val}%`, borderRadius: 4,
-                  background: statBarColor(val),
-                }} />
-              </div>
+              {typeof val === 'number' && (
+                <div style={{ height: 7, background: 'rgba(0,0,0,0.35)', borderRadius: 4 }}>
+                  <div style={{
+                    height: '100%', width: `${Math.min(val, 100)}%`, borderRadius: 4,
+                    background: statBarColor(val),
+                  }} />
+                </div>
+              )}
             </div>
           ))}
         </div>

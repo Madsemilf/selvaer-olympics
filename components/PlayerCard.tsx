@@ -10,9 +10,13 @@ const STAT_LABELS: Record<string, string> = {
   comeback: 'CMB',
   skryte: 'SKR',
   rasisme: 'RAS',
+  empati: 'EMP',
+  damer: 'DAM',
+  penis: 'PEN',
+  maricon: 'MAR',
 };
 
-const STAT_ORDER = ['styrke', 'pilse', 'jogglefaktor', 'sjobein', 'comeback', 'skryte', 'rasisme'];
+const STAT_ORDER = ['styrke', 'pilse', 'jogglefaktor', 'sjobein', 'comeback', 'skryte', 'rasisme', 'empati', 'damer', 'penis', 'maricon'];
 
 function tierClass(overall: number) {
   if (overall >= 75) return styles.gold;

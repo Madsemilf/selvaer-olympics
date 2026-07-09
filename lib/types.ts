@@ -8,6 +8,10 @@ export interface ParticipantStats {
   comeback: number;
   skryte: number;
   rasisme?: number;
+  empati?: number;
+  damer?: number;
+  penis?: string;
+  maricon?: number;
 }
 
 export interface Participant {

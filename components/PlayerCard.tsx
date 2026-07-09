@@ -9,9 +9,10 @@ const STAT_LABELS: Record<string, string> = {
   sjobein: 'SJØ',
   comeback: 'CMB',
   skryte: 'SKR',
+  rasisme: 'RAS',
 };
 
-const STAT_ORDER = ['styrke', 'pilse', 'jogglefaktor', 'sjobein', 'comeback', 'skryte'];
+const STAT_ORDER = ['styrke', 'pilse', 'jogglefaktor', 'sjobein', 'comeback', 'skryte', 'rasisme'];
 
 function tierClass(overall: number) {
   if (overall >= 75) return styles.gold;
@@ -45,7 +46,7 @@ export default function PlayerCard({ participant }: { participant: Participant }
       <hr className={styles.divider} />
 
       <div className={styles.stats}>
-        {STAT_ORDER.map(key => (
+        {STAT_ORDER.filter(key => participant.stats[key as keyof typeof participant.stats] !== undefined).map(key => (
           <div key={key} className={styles.stat}>
             <span className={styles.statVal}>
               {participant.stats[key as keyof typeof participant.stats]}

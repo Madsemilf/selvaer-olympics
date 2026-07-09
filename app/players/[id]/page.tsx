@@ -18,6 +18,7 @@ const STAT_LABELS: Record<string, string> = {
   sjobein: 'Sjøbein',
   comeback: 'Comeback-evne',
   skryte: 'Skryte-nivå',
+  rasisme: 'Rasisme',
 };
 
 function statBarColor(val: number) {

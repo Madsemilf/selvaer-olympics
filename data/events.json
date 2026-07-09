@@ -1,27 +1,22 @@
 [
   {
-    "id": "kveitelinebaering",
-    "name": "Kveitelinebæring",
-    "description": "Bær kveiteline en gitt distanse/tid med pils innlagt. Styrke og utholdenhet avgjør."
+    "id": "traden",
+    "name": "Tråden",
+    "description": "Gjelder å sitte igjen med lengst tråd. Alle kutter, og én går ut hver runde."
   },
   {
-    "id": "konkurranse-2",
-    "name": "Konkurranse 2",
-    "description": "TBA"
+    "id": "spikeren",
+    "name": "Spikern",
+    "description": "Alle setter sin egen spiker i en planke og slår etter tur. Du har vunnet når spikeren er slått helt ned. Ett slag per runde."
   },
   {
-    "id": "konkurranse-3",
-    "name": "Konkurranse 3",
-    "description": "TBA"
+    "id": "ballkast",
+    "name": "Ballkast",
+    "description": "Kast ball med armene gjennom bena, deretter kast fremover. Sinnsykt vanskelig."
   },
   {
-    "id": "konkurranse-4",
-    "name": "Konkurranse 4",
-    "description": "TBA"
-  },
-  {
-    "id": "konkurranse-5",
-    "name": "Konkurranse 5",
-    "description": "TBA (valgfri)"
+    "id": "kveitelinesnoret",
+    "name": "Kveitelinesnøret",
+    "description": "Hal inn snøret til kveitelinen raskest."
   }
 ]

@@ -1,7 +1,7 @@
-import type { Participant, Placements } from './types';
+import { CORE_STAT_KEYS, type Participant, type Placements } from './types';
 
 export function getOverall(stats: Participant['stats']): number {
-  const vals = Object.values(stats);
+  const vals = CORE_STAT_KEYS.map(key => stats[key]);
   return Math.round(vals.reduce((a, b) => a + b, 0) / vals.length);
 }
 

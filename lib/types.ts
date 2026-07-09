@@ -1,3 +1,5 @@
+export const CORE_STAT_KEYS = ['styrke', 'pilse', 'jogglefaktor', 'sjobein', 'comeback', 'skryte'] as const;
+
 export interface ParticipantStats {
   styrke: number;
   pilse: number;
@@ -5,6 +7,7 @@ export interface ParticipantStats {
   sjobein: number;
   comeback: number;
   skryte: number;
+  rasisme?: number;
 }
 
 export interface Participant {

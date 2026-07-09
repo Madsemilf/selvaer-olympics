@@ -2,7 +2,7 @@
   {
     "id": "traden",
     "name": "Tråden",
-    "description": "Gjelder å sitte igjen med lengst tråd. Alle kutter, og én går ut hver runde."
+    "description": "Gjelder å ikke sitte igjen med kortest tråd. Alle kutter, og den med kortest tråd ryker ut hver runde."
   },
   {
     "id": "spikeren",

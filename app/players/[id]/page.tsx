@@ -23,6 +23,7 @@ const STAT_LABELS: Record<string, string> = {
   damer: 'Damer',
   penis: 'Penis',
   maricon: 'Maricon',
+  konebanker: 'Konebanker',
 };
 
 function statBarColor(val: number) {

@@ -12,6 +12,7 @@ export interface ParticipantStats {
   damer?: number;
   penis?: string;
   maricon?: number;
+  konebanker?: number;
 }
 
 export interface Participant {

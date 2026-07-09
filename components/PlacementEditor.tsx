@@ -48,8 +48,6 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
     });
   };
 
-  const usedRanks = new Set(Object.values(placements));
-
   return (
     <div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -90,7 +88,7 @@ export default function PlacementEditor({ eventId, participants, initialPlacemen
               >
                 <option value="">— plass</option>
                 {Array.from({ length: 11 }, (_, i) => i + 1).map(n => (
-                  <option key={n} value={n} disabled={usedRanks.has(n) && current !== n}>
+                  <option key={n} value={n}>
                     {n}. plass
                   </option>
                 ))}

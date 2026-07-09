@@ -9,10 +9,12 @@ export function calcLeaderboard(participants: Participant[], placements: Placeme
   const scores: Record<string, number> = {};
   participants.forEach(p => { scores[p.id] = 0; });
 
+  const maxRank = participants.length;
+
   for (const eventPlacements of Object.values(placements)) {
     for (const [pid, rank] of Object.entries(eventPlacements)) {
       if (rank && scores[pid] !== undefined) {
-        scores[pid] += 10 - rank; // 1st=9pts, 2nd=8pts, ..., 9th=1pt
+        scores[pid] += Math.max(0, maxRank - rank);
       }
     }
   }
